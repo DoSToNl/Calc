@@ -1,0 +1,82 @@
+* {
+	box-sizing: border-box;
+}
+.blue {
+	background: blue !important;
+}
+.grey {
+	background: grey !important;
+}
+.block-2 {
+	padding: 20px;
+	max-width: 446px;
+	width: 100%;
+	margin: 0 auto;
+	border-radius: 20px;
+	background: yellow;
+	border: 3px solid red;
+}
+.title {
+	font-size: 20px;
+	color: red;
+	font-weight: bold;
+	margin-bottom: 15px;
+	text-align: center;
+}
+.input {
+	width: 100%;
+	height: 55px;
+	font-size: 22px;
+	font-weight: bold;
+	color: red;
+}
+
+.btn_wrap {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.btn {
+	width: 40px;
+	height: 40px;
+	color: #000;
+	font-size: 20px;
+	font-weight: bold;
+	border-radius: 5px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid red;
+	cursor: pointer;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	transition: all 0.3s ease;
+}
+.btn:hover {
+	transform: scale(1.1);
+}
+.reset {
+	background: red;
+	color: #fff;
+	border: 1px solid red;
+}
+.calc {
+	background: black;
+	border: 1px solid black;
+	color: #fff;
+}
+.answer {
+	width: 200px;
+	background: #fff;
+
+}

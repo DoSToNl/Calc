@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="RU">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="images/css/styles.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	
+	<title>Lesson 1</title>
+</head>
+<body>
+	<div class="wrapper">
+		<div id="app">
+			<div class="block-1">
+				<span @click="changeText">Кнопка</span>
+				<p>{{ massage }}</p>
+				<p>Color : {{ stylesCSS }}</p>
+				<input type="text" @input="stylesCSS = $event.target.value" placeholder="blue or grey">
+			</div>
+			<div :class="stylesCSS" class="block-2" id="block-2">
+				<div class="title">Калькулятор</div>
+				<input class="input" @keyup.enter="calc()" type="text" v-model="result" placeholder="0">
+				<div class="btn_wrap">
+					<button class="btn" @click="input(num)" v-for="num in numbers">{{num}}</button>
+					<button class="btn" @click="input(op)" v-for="op in operations">{{op}}</button>
+					<button class="btn reset" @click="reset()">C</button>
+					<button class="btn calc" @click="calc()">=</button>
+				</div>
+			</div>
+			<div class="block-3">
+				
+			</div>	
+		</div>	
+			
+	</div>
+
+	
+	<script src="images/js/main.js"></script>
+</body>
+</html>
