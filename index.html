@@ -6,14 +6,12 @@
 	<link rel="stylesheet" href="images/css/styles.css">
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	
-	<title>Lesson 1</title>
+	<title>Calc</title>
 </head>
 <body>
 	<div class="wrapper">
 		<div id="app">
 			<div class="block-1">
-				<span @click="changeText">Кнопка</span>
-				<p>{{ massage }}</p>
 				<p>Color : {{ stylesCSS }}</p>
 				<input type="text" v-on:input="stylesCSS = $event.target.value" placeholder="blue or grey">
 			</div>
@@ -27,35 +25,7 @@
 					<button class="btn answer" @click="answer()">=</button>
 				</div>
 			</div>
-		</div>	
-		<div id="app2">
-			<div class="block-3">
-				<h3>Todo List (HomeWork №1)</h3>
-				<div class="block_wrap">
-					<div class="b_header">
-						<input type="text" placeholder="Заголовок" id="listsTitle">
-						<input type="text" placeholder="Описание" id="listsDesc">
-						<button @click="addItem" type="button">+</button>
-					</div>
-					<div class="b_main">
-						<h4>Задачи</h4>
-						<div class="wrap">
-							<ul>
-								<li v-for="(item, index) in items" class="item_wrap">
-									<div :class="check" class="item">
-										<div class="title">{{item.title}}</div>
-										<div class="desc">{{item.desc}}</div>
-									</div>	
-									<input class="checkbox" type="checkbox" @click="checkfunction(index)">
-									<button class="delete" @click="deleteItem(index)" type="button">x</button>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
 		</div>
-			
 	</div>
 
 	
