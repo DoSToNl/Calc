@@ -15,22 +15,46 @@
 				<span @click="changeText">Кнопка</span>
 				<p>{{ massage }}</p>
 				<p>Color : {{ stylesCSS }}</p>
-				<input type="text" @input="stylesCSS = $event.target.value" placeholder="blue or grey">
+				<input type="text" v-on:input="stylesCSS = $event.target.value" placeholder="blue or grey">
 			</div>
 			<div :class="stylesCSS" class="block-2" id="block-2">
 				<div class="title">Калькулятор</div>
-				<input class="input" @keyup.enter="calc()" type="text" v-model="result" placeholder="0">
+				<input class="input" @keyup.enter="answer()" type="text" v-model="result" placeholder="0">
 				<div class="btn_wrap">
-					<button class="btn" @click="input(num)" v-for="num in numbers">{{num}}</button>
-					<button class="btn" @click="input(op)" v-for="op in operations">{{op}}</button>
+					<button class="btn" @click="input(number)" v-for="number in numbers">{{number}}</button>
+					<button class="btn" @click="input(operator)" v-for="operator in operations">{{operator}}</button>
 					<button class="btn reset" @click="reset()">C</button>
-					<button class="btn calc" @click="calc()">=</button>
+					<button class="btn answer" @click="answer()">=</button>
 				</div>
 			</div>
-			<div class="block-3">
-				
-			</div>	
 		</div>	
+		<div id="app2">
+			<div class="block-3">
+				<h3>Todo List (HomeWork №1)</h3>
+				<div class="block_wrap">
+					<div class="b_header">
+						<input type="text" placeholder="Заголовок" id="listsTitle">
+						<input type="text" placeholder="Описание" id="listsDesc">
+						<button @click="addItem" type="button">+</button>
+					</div>
+					<div class="b_main">
+						<h4>Задачи</h4>
+						<div class="wrap">
+							<ul>
+								<li v-for="(item, index) in items" class="item_wrap">
+									<div :class="check" class="item">
+										<div class="title">{{item.title}}</div>
+										<div class="desc">{{item.desc}}</div>
+									</div>	
+									<input class="checkbox" type="checkbox" @click="checkfunction(index)">
+									<button class="delete" @click="deleteItem(index)" type="button">x</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 			
 	</div>
 

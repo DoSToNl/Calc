@@ -22,6 +22,8 @@
 	font-weight: bold;
 	margin-bottom: 15px;
 	text-align: center;
+	text-transform: uppercase;
+	border: 1px solid red;
 }
 .input {
 	width: 100%;
@@ -58,7 +60,7 @@
 	justify-content: center;
 	border: 1px solid red;
 	cursor: pointer;
-	margin-right: 10px;
+	margin: 0 5px;
 	margin-bottom: 10px;
 	transition: all 0.3s ease;
 }
@@ -70,13 +72,46 @@
 	color: #fff;
 	border: 1px solid red;
 }
-.calc {
+.answer {
 	background: black;
 	border: 1px solid black;
 	color: #fff;
 }
-.answer {
+.list {
 	width: 200px;
-	background: #fff;
-
+	padding: 10px;
+	font-size: 20px;
+	font-weight: bold;
+	border: 1px solid black;
+	margin-bottom: 5px;
+}
+.desc {
+	font-weight: 400;
+	font-size: 18px;
+	text-align: center;
+}
+.item_wrap {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+}
+.item {
+	margin-right: 20px;
+	margin-bottom: 10px;
+}
+.delete {
+	height: 55px;
+	margin-left: 20px;
+}
+.block-3 {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 }
